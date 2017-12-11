@@ -11,8 +11,6 @@ class userController extends Controller
     {
         $this->middleware('auth');
     }
-
-
     public function index()
     {
         $users = User::orderBy('created_at', 'desc')->paginate(10);
